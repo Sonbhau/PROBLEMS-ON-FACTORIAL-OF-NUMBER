@@ -1,0 +1,171 @@
+1.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND DISPLAY ITS MULTIPLICATION OF FACTORS
+# include<stdio.h>
+
+int MultiFact(int iNo)
+{
+  int iCnt = 0;
+  int iMulti = 1;
+  for (iCnt=1;iCnt<=iNo/2;iCnt++)
+  {
+   if ((iNo%iCnt)==0)
+   {
+    iMulti = (iMulti)*(iCnt);
+   }
+  }
+return iMulti;
+
+}
+
+
+
+
+
+
+int main()
+{
+int iValue = 0;
+int iRet = 0;
+
+printf("enter number:");
+scanf("%d",&iValue);
+
+iRet = MultiFact(iValue);
+
+printf("%d",iRet);
+
+return 0;
+
+
+    return 0;
+}
+
+2.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND DISPLAY ALL ITS NON FACTORS.
+# include<stdio.h>
+
+void NonFact(int iNo)
+{
+    int iCnt = 0;
+
+    for(iCnt=1;iCnt<=iNo;iCnt++)
+    {
+        if((iNo%iCnt)>=1)
+        {
+            printf("%d\t",iCnt);
+        }
+    }
+}
+
+
+
+
+
+
+
+int main()
+{
+
+
+
+    int iValue = 0;
+
+    printf("ENTER NUMBER:");
+
+    scanf("%d",&iValue);
+
+    NonFact(iValue);
+
+    return 0;
+
+}
+
+3.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND RETURN SUMMATION OF ALL ITS NON FACTORS.
+# include<stdio.h>
+
+int NonFact(int iNo)
+{
+    int iCnt = 0;
+     int iSum = 0;
+    for(iCnt=1;iCnt<=iNo;iCnt++)
+    {
+        if((iNo%iCnt)>=1)
+        {
+            iSum = iSum+iCnt;
+           
+        }
+    }
+    return iSum;
+}
+
+
+
+
+
+
+
+int main()
+{
+
+
+
+    int iValue = 0 , iRet =0;
+
+    printf("ENTER NUMBER:");
+
+    scanf("%d",&iValue);
+
+   iRet =  NonFact(iValue);
+
+ printf("summation of its all non factors:%d",iRet);
+    return 0;
+
+}
+3.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND RETURN DIFFERENCE BETE=WEEN SUMMATION OF ALL ITS 
+FACTORS AND NON FACTORS.
+# include<stdio.h>
+
+int FactDiff(int iNo)
+{
+    int iCnt = 0 ;
+    int iSum = 0;
+    int iSum1 =0;
+    
+    for(iCnt=1;iCnt<=iNo;iCnt++)
+    {
+        if((iNo%iCnt)>=1)
+        {
+            iSum = iSum+iCnt;
+           
+        }
+       else if((iNo%iCnt)==0)
+        {
+            iSum1 = iSum1+iCnt;
+        }
+    }
+    
+  return  iSum1-iSum;
+    
+}
+
+
+
+
+
+
+
+int main()
+{
+
+
+
+    int iValue = 0 , iRet =0;
+
+    printf("ENTER NUMBER:");
+
+    scanf("%d",&iValue);
+
+   iRet =  FactDiff(iValue);
+
+ printf("%d",iRet);
+    return 0;
+
+}
