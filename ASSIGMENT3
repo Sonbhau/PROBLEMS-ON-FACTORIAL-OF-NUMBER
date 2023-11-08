@@ -1,1 +1,167 @@
+1.WRITE A PROGRAM WHICH ACCEPT ONE NUMBER FROM USER AND PRINT THAT NUMBER OF EVEN NUMBER ON SCREEN
+
+# include<stdio.h>
+
+void PrintEven(int iNo)
+{
+    int iCnt = 0;
+           for(iCnt = 1;iCnt<=iNo*2;iCnt++)
+           {
+            if((iCnt%2) == 0)
+            {
+            printf("%d\t",iCnt);
+           }
+
+           }
+}
+
+int main()
+{
+    int iValue = 0;
+    printf("ENTER NUMBER\n");
+    scanf("%d",&iValue);
+    PrintEven(iValue);
+    return 0;
+}
+
+2.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND PRINT EVEN FACTORS OF THAT NUMBER
+# include<stdio.h>
+
+void DisplayFactor( int iNo)
+{
+    int i = 0;
+
+    if (iNo<=0)
+    {
+        iNo = -iNo;
+    }
+    for(i = 1;i<=iNo/2;i++)
+    {
+        if((iNo%i)==0)
+        {
+           
+           if((i%2)==0)
+           {
+            printf("%d\n",i);
+           }
+        }
+    }
+}
+
+int main()
+{
+    int iValue = 0;
+    printf("ENTER NUMBER\n");
+    scanf("%d",&iValue);
+
+    DisplayFactor(iValue);
+
+    return 0;
+}
+
+3.WRITE A PROGRAM WHICH ACCEPT NUMBER FROM USER AND PRINT EVEN FACTORS OF THAT NUMBER
+# include<stdio.h>
+
+void DisplayEvenFactor(int iNo)
+{
+    
+    int iCnt = 0;
+    if(iNo<=0)
+    {
+        iNo = -iNo;
+
+    }
+    for(iCnt=1;iCnt<=iNo/2;iCnt++)
+    {
+        if(((iNo%iCnt)==0) && (iCnt%2)==0)
+        {
+            printf("%d\n",iCnt);
+        }
+    }
+}
+
+
+
+
+
+int main()
+
+{
+    int iValue = 0;
+    printf("enter number\n");
+
+    scanf("%d",&iValue);
+    DisplayEvenFactor(iValue);
+
+    return 0;
+}
+
+4.ACCEPT ONE CHARACTER FROM USER AND CONVERT CASE OF THAT CHARACTER
+# include<stdio.h>
+# include<stdbool.h>
+
+void DisplayConvert(char CValue)
+{
+    if(CValue>='A'&& CValue<='Z')
+    {
+        printf("%c",CValue+32);
+    }
+    else if(CValue>='a'&&CValue<='z')
+    {
+        printf("%c",CValue-32);
+    }
+}
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("enter character\n");
+
+    scanf("%c",&cValue);
+    DisplayConvert(cValue);
+
+    return 0;
+}
+5.ACCEPT ONE CHARCTER FROM USER AND CHECK WHETHER THAT CHARACTER IS VOWEL OR NOT
+# include <stdio.h>
+
+typedef int BOOL;
+# define TRUE 1
+# define FALSE 0;
+
+BOOL ChkVowel(char Cvalue)
+{ 
+    
+    if(Cvalue=='A'||Cvalue=='E'||Cvalue=='I'|| Cvalue =='O'|| Cvalue=='U'||Cvalue=='a'||Cvalue=='e' ||Cvalue=='i' || Cvalue =='o'|| Cvalue=='u')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
+int main()
+{
+    char cValue = '\0';
+    BOOL bRet = FALSE;
+    printf("enter character\n");
+
+    scanf("%c",&cValue);
+
+    bRet = ChkVowel(cValue);
+    if(bRet==TRUE)
+    {
+        printf("it is vowel");
+    }
+    else
+    {
+          printf("it is not vowel");
+
+    }
+
+    return 0;
+}
 
